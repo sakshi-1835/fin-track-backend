@@ -8,7 +8,9 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://fin-track-frontend-jx8s8bxve-sakshi-1835s-projects.vercel.app/",
+}));
 app.use(express.json());
 
 app.use("/api", expenseRoutes);
